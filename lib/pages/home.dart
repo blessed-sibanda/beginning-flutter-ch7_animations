@@ -1,5 +1,6 @@
 import 'package:ch7_animations/widgets/animated_container.dart';
 import 'package:ch7_animations/widgets/animated_cross_fade.dart';
+import 'package:ch7_animations/widgets/animated_opacity.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -19,12 +20,17 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: SafeArea(
-        child: Column(
-          children: const <Widget>[
-            AnimatedContainerWidget(),
-            Divider(),
-            AnimatedCrossFadeWidget(),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: const <Widget>[
+              AnimatedContainerWidget(),
+              Divider(),
+              AnimatedCrossFadeWidget(),
+              Divider(),
+              AnimatedOpacityWidget(),
+            ],
+          ),
         ),
       ),
     );
